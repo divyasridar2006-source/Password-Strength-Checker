@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+</head>
+<body>
+<header>
+    <h1>Password Strength Checker</h1>
+</header>
+<main>
+    <section>
+        <form id="passwordForm">
+            <label for="password">Enter Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <button type="button" id="togglePassword">Show</button>
+            <label for="minLength">Minimum Length</label>
+            <select id="minLength">
+                <option value="6">6</option>
+                <option value="8" selected>8</option>
+                <option value="10">10</option>
+            </select>
+            <h3 id="strength"></h3>
+            <div class="strength-bar">
+                <div id="strengthProgress"></div></div>
+            <ul>
+                <li id="lengthCheck">Length</li>
+                <li id="uppercaseCheck">Uppercase</li>
+                <li id="lowercaseCheck">Lowercase</li>
+                <li id="numberCheck">Number</li>
+                <li id="specialCheck">Special Character</li>
+            </ul>
+            <p id="error"></p>
+            <button type="button">Check Password</button>
+            <button type="button" id="clear">Clear</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
