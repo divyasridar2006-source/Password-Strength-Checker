@@ -11,6 +11,8 @@ let strengthProgress = document.getElementById("strengthProgress");
 
 let clear = document.getElementById("clear");
 
+
+
 password.addEventListener("input", function() {
     let p = password.value;
 let score=0;
