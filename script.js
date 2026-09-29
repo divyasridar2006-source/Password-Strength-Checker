@@ -1,24 +1,25 @@
-let password= document.getElementById("password");
-let lengthCheck= document.getElementById("lengthCheck");
-let uppercaseCheck= document.getElementById("uppercaseCheck");
-let lowercaseCheck= document.getElementById("lowercaseCheck");
-let numberCheck= document.getElementById("numberCheck");
-let specialCheck= document.getElementById("specialCheck");
+let password = document.getElementById("password");
+let lengthCheck = document.getElementById("lengthCheck");
+let uppercaseCheck = document.getElementById("uppercaseCheck");
+let lowercaseCheck = document.getElementById("lowercaseCheck");
+let numberCheck = document.getElementById("numberCheck");
+let specialCheck = document.getElementById("specialCheck");
 
-let strength= document.getElementById("strength");
-let strengthProgress= document.getElementById("strengthProgress");
+let strength = document.getElementById("strength");
+let strengthProgress = document.getElementById("strengthProgress");
 
-let clear= document.getElementById("clear");
+let clear = document.getElementById("clear");
 password.addEventListener("input", function() {
  let p = password.value;
  let score=0;
     if (p.length >= 8) 
-        {
+    {
         lengthCheck.innerHTML = "&#10004; Length";
         score++;    
 } 
 else {
-        lengthCheck.innerHTML = "&#10006; Length";}
+        lengthCheck.innerHTML = "&#10006; Length";
+    }
     if (p.match(/[A-Z]/)) 
         {
         uppercaseCheck.innerHTML = "&#10004; Uppercase";
@@ -26,7 +27,8 @@ else {
     } 
     else 
         {
-        uppercaseCheck.innerHTML = "&#10006; Uppercase";}
+        uppercaseCheck.innerHTML = "&#10006; Uppercase";
+    }
     if (p.match(/[a-z]/)) 
         {
         lowercaseCheck.innerHTML = "&#10004; Lowercase";
@@ -34,15 +36,17 @@ else {
     } 
     else 
         {
-        lowercaseCheck.innerHTML = "&#10006; Lowercase";}
+        lowercaseCheck.innerHTML = "&#10006; Lowercase";
+    }
     if (p.match(/[0-9]/)) 
         {
         numberCheck.innerHTML = "&#10004; Number";
         score++;
     } 
     else
-         {
-        numberCheck.innerHTML = "&#10006; Number";}
+        {
+        numberCheck.innerHTML = "&#10006; Number";
+    }
     if (p.match(/[^A-Za-z0-9]/)) 
         {
         specialCheck.innerHTML = "&#10004; Special Character";
@@ -50,7 +54,8 @@ else {
     }
      else 
         {
-        specialCheck.innerHTML = "&#10006; Special Character";}
+        specialCheck.innerHTML = "&#10006; Special Character";
+    }
 if (p.length === 0) 
     {
     strength.innerHTML = "";
